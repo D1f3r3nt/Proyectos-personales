@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/ho"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="@string/title_home"
+    />
+    <item
+            android:id="@+id/profit"
+            android:icon="@android:drawable/stat_sys_upload"
+            android:title="@string/title_profit"
+    />
+    <item
+            android:id="@+id/add"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="@string/title_add"
+    />
+    <item
+            android:id="@+id/loss"
+            android:icon="@android:drawable/stat_sys_download"
+            android:title="@string/title_loss"
+    />
+    <item
+            android:id="@+id/chart"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/title_chart"
+    />
+</menu>

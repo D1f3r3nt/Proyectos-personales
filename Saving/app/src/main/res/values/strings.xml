@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Savings</string>
+    <string name="title_home">Home</string>
+    <string name="title_chart">Chart</string>
+    <string name="title_profit">Profit</string>
+    <string name="title_loss">Loss</string>
+    <string name="title_add">Add</string>
+    <string name="Earn">Earn</string>
+    <string name="Doit">Do it</string>
+    <string name="TakeOut">Take Out</string>
+    <string name="description">Description</string>
+    <string name="amount">Amount</string>
+    <string name="mensajeToast">Operacion realizada</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="nohay">No hay ninguna transaccion hasta el momento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

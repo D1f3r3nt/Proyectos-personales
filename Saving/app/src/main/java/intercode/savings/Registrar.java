@@ -1,0 +1,156 @@
+package intercode.savings;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import com.android.volley.*;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import org.json.JSONArray;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class Registrar extends AppCompatActivity {
+
+    private Button btnLogin, btnGo;
+    private EditText user, amount, pass, email;
+    String validacion = ")(&%povnreuiSSvfrv4816!%";
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_registrar);
+
+        btnLogin = findViewById(R.id.log);
+        btnGo = findViewById(R.id.go);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+            }
+        });
+
+        btnGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user = (EditText) findViewById(R.id.username);
+                amount = (EditText) findViewById(R.id.cantidad);
+                pass = (EditText) findViewById(R.id.password);
+                email = (EditText)  findViewById(R.id.email);
+
+                if(user.getText().toString().length() > 0 && amount.getText().toString().length() > 0 && pass.getText().toString().length() > 0 && email.getText().toString().length() > 0){
+
+                    buscarPersonasYEjecutar("https://savingscomp.000webhostapp.com/buscar_persona.php?User="+user.getText().toString()+"&&Email="+email.getText().toString());
+
+
+                }else{
+                    Toast.makeText(Registrar.this, "PONGA TODOS LOS DATOS", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed(){
+        return;
+    }
+
+    public void buscarPersonasYEjecutar(String URL){
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                Toast.makeText(Registrar.this, "ERROR\n El email o el usuario\nya existen", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                registrarPersonas("https://savingscomp.000webhostapp.com/insertar_persona.php");
+                enlazarDispositivos("https://savingscomp.000webhostapp.com/enlazar.php");
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(jsonArrayRequest);
+
+
+    }
+
+    private void registrarPersonas(String URL){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast t;
+                t = Toast.makeText(getApplicationContext(), "OPERACION EXITOSA", Toast.LENGTH_SHORT);
+                t.show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast t;
+                t = Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT);
+                t.show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> parametros = new HashMap<String, String>();
+                parametros.put("validacion", validacion);
+                parametros.put("cant_i", amount.getText().toString());
+                parametros.put("user", user.getText().toString());
+                parametros.put("password", pass.getText().toString());
+                parametros.put("email", email.getText().toString());
+                return parametros;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        requestQueue.add(stringRequest);
+
+    }
+
+    private void enlazarDispositivos(String URL){
+        String ID = Settings.Secure.getString(getBaseContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast t;
+                t = Toast.makeText(getApplicationContext(), "Enlazamiento: "+error.toString(), Toast.LENGTH_SHORT);
+                t.show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> parametros = new HashMap<String, String>();
+                parametros.put("validacion", validacion);
+                parametros.put("ID", ID);
+                parametros.put("email", email.getText().toString());
+                return parametros;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        requestQueue.add(stringRequest);
+
+    }
+
+}

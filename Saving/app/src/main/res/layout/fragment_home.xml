@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Home"
+        style="@style/Fondo">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+            android:text=""
+            android:layout_width="297dp"
+            android:layout_height="18dp"
+            android:textSize="10sp"
+            android:textColor="@color/lila"
+            android:id="@+id/gmail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"
+            android:gravity="center_horizontal"/>
+    <Button
+            android:text="Log out"
+            android:textSize="9sp"
+            style="@style/Boton_OUT"
+            android:layout_width="83dp"
+            android:layout_height="34dp"
+            android:id="@+id/logout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"/>
+
+
+    <TextView
+            android:text=""
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:id="@+id/usuario"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintVertical_bias="0.037"
+            android:gravity="center_horizontal"/>
+
+    <TextView
+            android:text=""
+            android:layout_width="336dp"
+            android:layout_height="48dp"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:id="@+id/dinero"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintVertical_bias="0.118"
+            android:gravity="center_horizontal"/>
+
+    <ScrollView android:layout_width="392dp"
+                android:layout_height="578dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.729"
+                app:layout_constraintHorizontal_bias="0.0">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:id="@+id/layaout">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

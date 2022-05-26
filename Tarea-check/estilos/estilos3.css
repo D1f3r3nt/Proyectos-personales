@@ -1,0 +1,67 @@
+table {
+	margin-top:50;
+	min-width: 30%;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow: 5px 10px #565D59;
+	border-color: #F4F4F4;
+
+	
+}
+
+body {
+	background-color: #F1BA1C;
+
+}
+
+td {
+	background-color: #F4F4F4;
+	border-radius: 20px 20px 20px 20px;
+	padding:20px;
+}
+
+input[type="textbox"]{
+	border: 0;
+	height:50;
+	width: 300;
+}
+input[type="password"]{
+	border: 0;
+	height:50;
+	width: 300;
+}
+input[type="email"]{
+	border: 0;
+	height:50;
+	width: 300;
+}
+input[type="date"]{
+	border: 0;
+	height:25;
+	width: 150;
+}
+textarea{
+
+	max-width: 250px;
+	min-width: 250px;
+	max-height: 150px;
+	min-height: 150px;
+	width: 250px;
+	height:150px;
+	border:0;
+
+
+}
+
+.imagen{
+	
+	
+	margin-top: 0%;
+	width:200;
+
+}
+.letras{
+	
+	font-size: 60;
+	margin-top: 10;
+
+}

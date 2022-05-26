@@ -1,0 +1,45 @@
+table {
+	margin-top:50;
+	width:30%;
+	height: 350;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow: 5px 10px #565D59;
+	border-color: #F4F4F4;
+	
+}
+
+body {
+	background-color: #F1BA1C;
+
+}
+
+td {
+	background-color: #F4F4F4;
+	border-radius: 20px 20px 20px 20px;
+}
+
+input[type="textbox"]{
+	border: 0;
+	height:50;
+	width: 300;
+}
+input[type="password"]{
+	border: 0;
+	height:50;
+	width: 300;
+}
+input[type="email"]{
+	border: 0;
+	height:50;
+	width: 300;
+
+.imagen{
+	
+
+}
+.letras{
+	
+	
+	margin-top: 10;
+
+}
