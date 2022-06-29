@@ -1,0 +1,72 @@
+#formulario {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: fit-content;
+    display: grid;
+    grid-template-rows: repeat(10, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 15px;
+    align-items: center;
+    justify-items: start;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+form > img {
+    width: 70px;
+}
+
+form > input,
+form > select,
+form > label {
+    grid-column-end: span 2;
+}
+
+form > input,
+form > select{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+form > label:nth-of-type(2),
+form > label:nth-of-type(3),
+form > input:nth-of-type(2),
+form > input:nth-of-type(3){
+    grid-column-end: span 1;
+}
+
+form > input:nth-of-type(2),
+form > input:nth-of-type(3){
+    width: 250px;
+}
+
+form > input:nth-of-type(1),
+form > select {
+    width: 600px;
+}
+
+form > input[type="button"],
+form > input[type="submit"] {
+    justify-self: center;
+}
+
+form > input[type="button"]:hover {
+    background-color: #ff5454;
+    color: white;
+}
+
+form > input[type="submit"]:hover {
+    background-color: #a42222;
+    color: white;
+}

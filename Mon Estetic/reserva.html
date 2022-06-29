@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <!-- ICONO PAGINA -->
+    <link rel="icon" href="imagenes/logo/LogoPagina.png"/>
+    <!-- BOOTSTRAP CSS  -->
+    <link rel="stylesheet" href="bootstrap/boosIcons/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="bootstrap/boosCss/bootstrap.min.css"/>
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="normalize/normalize.css"/>
+    <!-- CSS PERSONAL -->
+    <link rel="stylesheet" href="projectCSS/global.css"/>
+    <link rel="stylesheet" href="projectCSS/reserva.css"/>
+    <!-- TITULO -->
+    <title>Món Estètic</title>
+</head>
+<body>
+    <header>
+        <div id="cabecera">
+            <a href="index.html">
+                <img src="imagenes/logo/LogoPequeno.png"/>
+            </a>
+            <h1>Món Estètic</h1>
+            <p><i class="bi bi-phone-fill"></i> 605566352<br/><i class="bi bi-telephone-fill"></i> 971871030</p>
+            <p>Centro estética</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav nav-tabs justify-content-center bg-black">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="tratamientos.html">Tratamientos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="reserva.html">Reserva</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="formulario">
+        <form method="get" novalidate="novalidate" onsubmit="return validar();">
+            <img src="imagenes/logo/LogoPequeno.png"/>
+            <h3>RESERVA CITA</h3>
+            <label for="nombre">NOMBRE <span></span></label>
+            <input id="nombre" name="nombre" type="text" placeholder="Cristina"/>
+            <label for="telefono">TEL DE CONTACTO <span></span></label>
+            <label for="cita">DIA CITA <span></span></label>
+            <input id="telefono" name="telefono" type="number" placeholder="605566352"/>
+            <input id="cita" name="cita" type="datetime-local"/>
+            <label for="tratamiento">TRATAMIENTO <span></span></label>
+            <select id="tratamiento" name="tratamiento">
+                <option value="default" disabled selected>Elige...</option>
+                <option value="DC">Diseño de cejas</option>
+                <option value="AP">Extension de pestañas</option>
+                <option value="LP">Lifting de pestañas</option>
+                <option value="SL">Sesión láser</option>
+                <option value="AE">Aplicación de esmalte</option>
+                <option value="P">Pedicura</option>
+                <option value="TH">Tinte Henna</option>
+                <option value="TC">Tratamiento de cutis</option>
+                <option value="TF">Tratamiento facial</option>
+                <option value="UG">Uñas de gel</option>
+            </select>
+            <span></span>
+            <input id="boton" type="button" value="+ Tratamientos" onclick="presionado(this.id)"/>
+            <input type="submit" value="Solicitar"/>
+        </form>
+    </div>
+    <footer>
+        <div id="calzador">
+            <h4>Somos un centro de estética unisex</h4>
+            <p>
+                <a target="_blank" rel="noopener noreferrer"
+                   href="https://www.google.es/maps/dir//Carrer+Major,+7-1,+07144+Costitx,+Illes+Balears/@39.6567849,2.9496482,20.58z/data=!4m9!4m8!1m0!1m5!1m1!1s0x1297c8883a440299:0xa14b68b7c07f85cb!2m2!1d2.9493606!2d39.6566356!3e0">
+                    <i class="bi bi-geo-alt-fill"></i> Costitx - Mallorca C/Major nº5
+                </a>
+                <br/>Cerrado:<br/>
+                Domingos y Lunes<br/>
+                8:00 - 19:00 (Reservas hasta las 18:00)
+            </p>
+            <p>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/mon_estetic_costitx/?hl=es">
+                    <i class="bi bi-instagram"></i> @mon_estetic_costitx
+                </a>
+                <br/>
+                <i class="bi bi-phone-fill"></i> 605566352
+                <br/>
+                <i class="bi bi-telephone-fill"></i> 971871030
+                <br/>
+                <a target="_blank" rel="noopener noreferrer" href="mailto:criscostitx@gmail.com">
+                    <i class="bi bi-envelope-fill"></i> criscostitx@gmail.com
+                </a>
+            </p>
+        </div>
+    </footer>
+<!-- JS -->
+<script src="projectJS/anadir.js"></script>
+<script src="projectJS/comprobar.js"></script>
+<!-- BOOTSTRAP -->
+<script src="bootstrap/boosJs/bootstrap.min.js"></script>
+</body>
+</html>

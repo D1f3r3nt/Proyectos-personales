@@ -1,0 +1,52 @@
+#posicion {
+    margin-top: 50px;
+    height: 2600px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#posicion > select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: black 10px 10px 20px;
+}
+
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(10, 250px);
+    align-items: center;
+    justify-items: center;
+}
+
+#galeria > div {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    margin-top: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: #b2b2b2 1px solid;
+    box-shadow: grey 10px 10px 30px;
+}
+
+#galeria > div > img {
+    width: 125px;
+    height: 125px;
+}
+
+#galeria > div:hover {
+    width: 250px;
+    height: 250px;
+    z-index: 100;
+}
+
+#galeria > div:hover > img {
+    width: 250px;
+    height: 250px;
+}

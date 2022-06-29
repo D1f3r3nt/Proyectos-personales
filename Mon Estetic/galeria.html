@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <!-- ICONO PAGINA -->
+    <link rel="icon" href="imagenes/logo/LogoPagina.png"/>
+    <!-- BOOTSTRAP CSS  -->
+    <link rel="stylesheet" href="bootstrap/boosIcons/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="bootstrap/boosCss/bootstrap.min.css"/>
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="normalize/normalize.css"/>
+    <!-- CSS PERSONAL -->
+    <link rel="stylesheet" href="projectCSS/global.css"/>
+    <link rel="stylesheet" href="projectCSS/galeria.css"/>
+    <!-- TITULO -->
+    <title>Món Estètic</title>
+</head>
+<body>
+    <header>
+        <div id="cabecera">
+            <a href="index.html">
+                <img src="imagenes/logo/LogoPequeno.png"/>
+            </a>
+            <h1>Món Estètic</h1>
+            <p><i class="bi bi-phone-fill"></i> 605566352<br/><i class="bi bi-telephone-fill"></i> 971871030</p>
+            <p>Centro estética</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav nav-tabs justify-content-center bg-black">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="tratamientos.html">Tratamientos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="reserva.html">Reserva</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="posicion">
+        <select id="elecccion" onchange="seleccionar(this.id)">
+            <option value="all">Todo</option>
+            <option value="unas">Uñas de gel</option>
+            <option value="diseno">Diseño de cejas</option>
+            <option value="facial">Tratamiento facial</option>
+            <option value="lifting">Lifting de pestañas</option>
+        </select>
+        <div id="galeria">
+            <div class="unas"><img src="imagenes/galeria/Galeria1.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria2.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria3.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria4.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria5.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria6.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria7.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria8.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria9.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria10.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria11.jpeg"/></div>
+            <div class="lifting"><img src="imagenes/galeria/Galeria34LP.jpeg"/></div>
+            <div class="lifting"><img src="imagenes/galeria/Galeria35LP.jpg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria12.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria13.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria14.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria15.jpeg"/></div>
+            <div class="unas"><img src="imagenes/galeria/Galeria16.jpeg"/></div>
+            <div class="diseno"><img src="imagenes/galeria/Galeria17DC.jpg"/></div>
+            <div class="diseno"><img src="imagenes/galeria/Galeria18DC.jpg"/></div>
+            <div class="diseno"><img src="imagenes/galeria/Galeria19DC.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria24TF.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria25TF.jpeg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria26TF.png"/></div>
+            <div class="diseno"><img src="imagenes/galeria/Galeria20DC.jpg"/></div>
+            <div class="diseno"><img src="imagenes/galeria/Galeria21DC.jpg"/></div>
+            <div class="diseno"><img src="imagenes/galeria/Galeria22DC.jpeg"/></div>
+            <div class="diseno"><img src="imagenes/galeria/Galeria23DC.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria27TF.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria28TF.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria29TF.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria30TF.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria31TF.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria32TF.jpg"/></div>
+            <div class="facial"><img src="imagenes/galeria/Galeria33TF.jpg"/></div>
+            <div class="lifting"><img src="imagenes/galeria/Galeria40LP.jpg"/></div>
+            <div class="lifting"><img src="imagenes/galeria/Galeria36LP.jpg"/></div>
+            <div class="lifting"><img src="imagenes/galeria/Galeria37LP.jpg"/></div>
+            <div class="lifting"><img src="imagenes/galeria/Galeria38LP.jpg"/></div>
+            <div class="lifting"><img src="imagenes/galeria/Galeria39LP.jpg"/></div>
+        </div>
+    </div>
+    <footer>
+        <div id="calzador">
+            <h4>Somos un centro de estética unisex</h4>
+            <p>
+                <a target="_blank" rel="noopener noreferrer"
+                   href="https://www.google.es/maps/dir//Carrer+Major,+7-1,+07144+Costitx,+Illes+Balears/@39.6567849,2.9496482,20.58z/data=!4m9!4m8!1m0!1m5!1m1!1s0x1297c8883a440299:0xa14b68b7c07f85cb!2m2!1d2.9493606!2d39.6566356!3e0">
+                    <i class="bi bi-geo-alt-fill"></i> Costitx - Mallorca C/Major nº5
+                </a>
+                <br/>Cerrado:<br/>
+                Domingos y Lunes<br/>
+                8:00 - 19:00 (Reservas hasta las 18:00)
+            </p>
+            <p>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/mon_estetic_costitx/?hl=es">
+                    <i class="bi bi-instagram"></i> @mon_estetic_costitx
+                </a>
+                <br/>
+                <i class="bi bi-phone-fill"></i> 605566352
+                <br/>
+                <i class="bi bi-telephone-fill"></i> 971871030
+                <br/>
+                <a target="_blank" rel="noopener noreferrer" href="mailto:criscostitx@gmail.com">
+                    <i class="bi bi-envelope-fill"></i> criscostitx@gmail.com
+                </a>
+            </p>
+        </div>
+    </footer>
+<!-- JS -->
+<script src="projectJS/ordenar.js"></script>
+<!-- BOOTSTRAP -->
+<script src="bootstrap/boosJs/bootstrap.min.js"></script>
+</body>
+</html>

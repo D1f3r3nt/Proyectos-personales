@@ -1,0 +1,95 @@
+@font-face {
+    font-family: imponente;
+    src: url("../fuentes/RussoOne.ttf");
+}
+
+#pasador {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#pasador > div {
+    max-width: 1800px;
+}
+
+#novedades {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto;
+}
+
+#novedades > p {
+    font-size: 20pt;
+    font-weight: bold;
+    font-family: imponente, sans-serif;
+}
+
+#novedades > a > div {
+    width: 45rem;
+}
+
+#novedades > a > *:hover{
+    transform: scale(1.05);
+    box-shadow: grey 10px 10px 50px;
+}
+
+#ofertas {
+    margin: 40px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto 500px auto;
+    grid-template-rows: 50px auto;
+    grid-row-gap: 10px;
+}
+
+#ofertas > span {
+    justify-self: start;
+}
+
+#ofertas > span > div {
+    background-color: #dc3545;
+    color: white;
+    display: grid;
+    width: fit-content;
+    padding: 10px;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, 35px);
+    border-radius: 10px;
+    grid-column-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+#ofertas > p {
+    font-size: 20pt;
+    font-weight: bold;
+    grid-column-start: 2;
+    font-family: imponente, sans-serif;
+}
+
+#ofertas > a:nth-of-type(1) {
+    justify-self: end;
+}
+
+#ofertas > a:nth-of-type(3) {
+    justify-self: start;
+}
+
+#ofertas > a > div {
+    width: 14rem;
+}
+
+#ofertas > a:nth-of-type(2) > div {
+    width: 19rem;
+}
+
+#ofertas > a:hover {
+    transform: scale(1.05);
+    box-shadow: grey 10px 10px 50px;
+}

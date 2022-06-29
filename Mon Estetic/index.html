@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <!-- ICONO PAGINA -->
+    <link rel="icon" href="imagenes/logo/LogoPagina.png"/>
+    <!-- BOOTSTRAP CSS  -->
+    <link rel="stylesheet" href="bootstrap/boosIcons/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="bootstrap/boosCss/bootstrap.min.css"/>
+    <!-- AOS -->
+    <link rel="stylesheet" href="aos/aos.css"/>
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="normalize/normalize.css"/>
+    <!-- CSS PERSONAL -->
+    <link rel="stylesheet" href="projectCSS/global.css"/>
+    <link rel="stylesheet" href="projectCSS/index.css"/>
+    <!-- TITULO -->
+    <title>Món Estètic</title>
+</head>
+<body>
+    <header>
+        <div id="cabecera">
+            <a href="index.html">
+                <img src="imagenes/logo/LogoPequeno.png"/>
+            </a>
+            <h1>Món Estètic</h1>
+            <p><i class="bi bi-phone-fill"></i> 605566352<br/><i class="bi bi-telephone-fill"></i> 971871030</p>
+            <p>Centro estética</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav nav-tabs justify-content-center bg-black">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="tratamientos.html">Tratamientos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="reserva.html">Reserva</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="pasador">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide w-50 rounded overflow-hidden"
+             data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="imagenes/DissenyCelles2.jpg" class="d-block w-100" alt="Imagen no encontrada"/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Diseño de cejas</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="imagenes/Esmaltat2.png" class="d-block w-100" alt="Imagen no encontrada"/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Aplicación de esmalte</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="imagenes/LiftingPipelles2.png" class="d-block w-100" alt="Imagen no encontrada"/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Extensión de pestañas</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div id="novedades">
+        <p>¡NOVEDADES!</p>
+        <a href="tratamientos.html">
+            <div class="card rounded overflow-hidden">
+                <img src="imagenes/Laser.jpeg" class="card-img-top" alt="No se ha encontrado imagen"/>
+                <div class="card-body bg-black">
+                    <h5 class="card-title text-white">Sesión láser</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div id="ofertas">
+        <p>OFERTAS</p>
+        <span id="timer"></span>
+        <a href="reserva.html" data-aos="fade-right">
+            <div class="card rounded overflow-hidden">
+                <img src="imagenes/Esmaltat.jpeg" class="card-img-top" alt="No se ha encontrado imagen"/>
+                <div class="card-body bg-danger text-center">
+                    <p class="card-title text-white">Aplicación de esmalte</p>
+                    <h4 class="card-title text-white">-15%</h4>
+                </div>
+            </div>
+        </a>
+        <a href="reserva.html">
+            <div class="card rounded overflow-hidden">
+                <img src="imagenes/UnglesGel.jpeg" class="card-img-top" alt="No se ha encontrado imagen"/>
+                <div class="card-body bg-danger text-center">
+                    <p class="card-title text-white">Uñas de gel</p>
+                    <h4 class="card-title text-white">-40%</h4>
+                </div>
+            </div>
+        </a>
+        <a href="reserva.html" data-aos="fade-left">
+            <div class="card rounded overflow-hidden">
+                <img src="imagenes/Pedicures.jpeg" class="card-img-top" alt="No se ha encontrado imagen"/>
+                <div class="card-body bg-danger text-center">
+                    <p class="card-title text-white">Pedicura</p>
+                    <h4 class="card-title text-white">-20%</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+    <footer>
+        <div id="calzador">
+            <h4>Somos un centro de estética unisex</h4>
+            <p>
+                <a target="_blank" rel="noopener noreferrer"
+                   href="https://www.google.es/maps/dir//Carrer+Major,+7-1,+07144+Costitx,+Illes+Balears/@39.6567849,2.9496482,20.58z/data=!4m9!4m8!1m0!1m5!1m1!1s0x1297c8883a440299:0xa14b68b7c07f85cb!2m2!1d2.9493606!2d39.6566356!3e0">
+                    <i class="bi bi-geo-alt-fill"></i> Costitx - Mallorca C/Major nº5
+                </a>
+                <br/>Cerrado:<br/>
+                Domingos y Lunes<br/>
+                8:00 - 19:00 (Reservas hasta las 18:00)
+            </p>
+            <p>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/mon_estetic_costitx/?hl=es">
+                    <i class="bi bi-instagram"></i> @mon_estetic_costitx
+                </a>
+                <br/>
+                <i class="bi bi-phone-fill"></i> 605566352
+                <br/>
+                <i class="bi bi-telephone-fill"></i> 971871030
+                <br/>
+                <a target="_blank" rel="noopener noreferrer" href="mailto:criscostitx@gmail.com">
+                    <i class="bi bi-envelope-fill"></i> criscostitx@gmail.com
+                </a>
+            </p>
+        </div>
+    </footer>
+<!-- JS -->
+<script src="projectJS/timer.js"></script>
+<!-- AOS -->
+<script src="aos/aos.js"></script>
+<!-- BOOTSTRAP -->
+<script src="bootstrap/boosJs/bootstrap.min.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
